@@ -3,20 +3,16 @@
 #define infinity -1
 
 void input_coef(double* a, double* b, double* c);
-
 int find_root(double a, double b, double c, double* x1, double* x2);
-
 int solve_square(double a, double b, double c, double* x1, double* x2);
 
 /*void check_ss_work(double a, double b, double c, double x1_ozhid, double x2_ozhid);*/
 
 int main()
 {
-    check_ss_work(1, 2, 1, -1, 0);
-    printf("\nВсё\n");
-    check_ss_work(0,0,0,0,0);
-    printf("\nВсё\n");
-    check_ss_work(0, 2, 4, -2, 0);
+    double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
+    input_coef(&a, &b, &c);
+    solve_square(a, b, c, &x1, &x2);
 
     return 0;
 }
@@ -61,7 +57,7 @@ int solve_square(double a, double b, double c, double* x1, double* x2)
         {
             printf("Ваши коэффициенты %lg, %lg, %lg, ожидаемые корни %lg, %lg или %lg, %lg, у программы получилось так: %lg, %lg", a, b, c, x1_ozhid, x2_ozhid, x2_ozhid, x1_ozhid, x1, x2);
         }
-}
+}*/
 
 void input_coef(double* a, double* b, double* c)
 {
@@ -75,11 +71,9 @@ void input_coef(double* a, double* b, double* c)
     scanf("%lg", c);
 }
 
-
 int find_root(double a, double b, double c, double* x1, double* x2)
-{*/
+{
     printf("Ваши коэффициенты: a - %lg, b - %lg, c - %lg\n", a, b, c);
-
     if (a == 0)
        {
         if (b == 0 || b == 0 && c == 0)
@@ -118,4 +112,3 @@ int find_root(double a, double b, double c, double* x1, double* x2)
         }
         }
 }
-
