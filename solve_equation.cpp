@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
+
 #define infinity -1
 
 int check_vvod(double* input);
